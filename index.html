@@ -15,33 +15,65 @@
   <body>
     <main>
       <section
-        class="relative h-[538px] bg-[url(/images/desktop/image-header.jpg)] bg-no-repeat bg-center bg-cover px-[24px] py-[32px]"
+        class="relative h-[538px] bg-[url(./images/desktop/image-header.jpg)] bg-no-repeat bg-center bg-cover px-[24px] lg:px-[40px] py-[32px] md:h-[800px]"
       >
-        <nav class="flex flex-row justify-between">
+        <!-- HAMBURGER -->
+        <div
+          class="menu hidden absolute lg:hidden top-[70px] bg-white md:h-[329px] md:w-[688px] w-[85%] h-[350px] flex flex-col left-4 items-center justify-around py-[30px] font-[Barlow] font-semibold text-[20px] text-gray-500"
+        >
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Projects</a>
+          <a
+            class="bg-yellow-400 px-10 py-4 rounded-full font-[Fraunces] font-black text-[20px] text-black uppercase"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <nav class="relative flex flex-row justify-between items-center">
           <div class="logo-container">
-            <img src="/images/logo.svg" alt="" />
+            <img src="./images/logo.svg" alt="" />
           </div>
-          <div class="hamburger-container">
+          <div
+            class="site-links gap-10 font-[Barlow] text-white lg:flex lg:items-center lg:justify-center hidden"
+          >
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a
+              class="uppercase px-6 text-black font-[Fraunces] bg-white py-2 rounded-3xl text-[15px] font-black"
+              href="#"
+              >Contact</a
+            >
+          </div>
+          <div class="hamburger-container lg:hidden">
             <img src="/images/icon-hamburger.svg" alt="" />
           </div>
         </nav>
         <div class="hero flex flex-col justify-center items-center h-1/2">
           <h1
-            class="title font-[Fraunces] text-white text-[38px] tracking-[6px] leading-[120%] font-black text-center uppercase"
+            class="title font-[Fraunces] text-white text-[38px] tracking-[6px] leading-[120%] font-black text-center uppercase md:text-[56px]"
           >
-            We Are Creatives
+            We Are <br class="hidden md:inline" />
+            Creatives
           </h1>
         </div>
       </section>
-      <section class="services-grid grid grid-cols-1 text-center">
-        <div class="egg">
-          <img src="/images/desktop/image-transform.jpg" alt="" />
+      <section
+        class="services-grid grid grid-cols-1 text-center lg:grid-cols-2 lg:grid-rows-3"
+      >
+        <div class="egg lg:order-2 lg:h-[600px] lg:w-[720px]">
+          <img
+            class="w-full h-full"
+            src="/images/desktop/image-transform.jpg"
+            alt=""
+          />
         </div>
         <div
-          class="transform h-[437px] px-6 flex flex-col justify-center items-center gap-[24px]"
+          class="transform h-[437px] px-6 flex flex-col justify-center items-center gap-[24px] md:px-[158.5px] lg:order-1 lg:h-[600px] lg:w-[720px]"
         >
           <h2
-            class="transform-title font-[Fraunces] text-[32px] font-black leading-[125%]"
+            class="transform-title font-[Fraunces] text-[32px] font-black leading-[125%] md:text-[40px]"
           >
             Transform your <br />
             brand
@@ -64,16 +96,20 @@
             ></div>
           </div>
         </div>
-        <div class="drink">
-          <img src="/images/desktop/image-stand-out.jpg" alt="" />
+        <div class="drink lg:order-3">
+          <img
+            class="w-full"
+            src="./images/desktop/image-stand-out.jpg"
+            alt=""
+          />
         </div>
         <div
-          class="transform h-[437px] px-6 flex flex-col justify-center items-center gap-[24px]"
+          class="transform h-[437px] px-6 flex flex-col justify-center items-center gap-[24px] md:px-[158.5px] lg:order-4 lg:h-[600px] lg:w-[720px]"
         >
           <h2
-            class="transform-title font-[Fraunces] text-[32px] font-black leading-[125%]"
+            class="transform-title font-[Fraunces] text-[32px] font-black leading-[125%] md:text-[40px]"
           >
-            Stand out to the <br />
+            Stand out to the <br class="md:hidden" />
             right audience
           </h2>
           <p
@@ -95,7 +131,7 @@
           </div>
         </div>
         <div
-          class="cherry h-[600px] bg-cover bg-center bg-[url(/images/desktop/image-graphic-design.jpg)] flex flex-col items-center justify-end pb-[56px] px-[24px] gap-[32px]"
+          class="cherry h-[600px] bg-cover bg-center bg-[url(./images/desktop/image-graphic-design.jpg)] flex flex-col items-center justify-end pb-[56px] px-[24px] gap-[32px] md:px-[158.5px] lg:order-5"
         >
           <img src="" alt="" />
           <h2
@@ -110,7 +146,7 @@
           </p>
         </div>
         <div
-          class="orange h-[600px] bg-cover bg-center bg-[url(/images/desktop/image-photography.jpg)] flex flex-col items-center justify-end pb-[56px] px-[24px] gap-[32px]"
+          class="orange h-[600px] bg-cover bg-center bg-[url(./images/desktop/image-photography.jpg)] flex flex-col items-center justify-end pb-[56px] px-[24px] gap-[32px] md:px-[158.5px] lg:order-6"
         >
           <img src="" alt="" />
           <h2
@@ -125,73 +161,109 @@
         </div>
       </section>
       <section
-        class="testimonials flex flex-col items-center justify-center py-[48px] px-[24px] text-center gap-[56px]"
+        class="testimonials flex flex-col items-center justify-center py-[48px] px-[24px] text-center gap-[56px] lg:px-[140px] lg:py-[60px]"
       >
         <h2
           class="uppercase font-[Fraunces] text-[20px] font-black tracking-[4px] text-gray-400"
         >
           client testimonials
         </h2>
-        <div class="flex flex-col items-center justify-center gap-8 mt-[28px]">
-          <img
-            class="rounded-full w-[72px] mb-[24px]"
-            src="/images/image-emily.jpg"
-            alt=""
-          />
-          <p
-            class="font-[Barlow] text-[18px] leading-[165%] font-semibold text-gray-500"
+        <div
+          class="testimonial-people flex flex-col lg:flex-row md:flex-col lg:gap-4"
+        >
+          <div
+            class="flex flex-col items-center justify-center gap-8 mt-[28px]"
           >
-            We put our trust in Sunnyside and they delivered, making sure out
-            needs were met and deadlines were always hit.
-          </p>
-          <div class="testimonial-name">
-            <p class="font-[Fraunces] font-black text-[18px]">Emily R.</p>
-            <p class="font-[Barlow] text-gray-400">Marketing Director</p>
+            <img
+              class="rounded-full w-[72px] mb-[24px]"
+              src="./images/image-emily.jpg"
+              alt=""
+            />
+            <p
+              class="font-[Barlow] text-[18px] leading-[165%] font-semibold text-gray-500"
+            >
+              We put our trust in Sunnyside and they delivered, making sure out
+              needs were met and deadlines were always hit.
+            </p>
+            <div class="testimonial-name">
+              <p class="font-[Fraunces] font-black text-[18px]">Emily R.</p>
+              <p class="font-[Barlow] text-gray-400">Marketing Director</p>
+            </div>
           </div>
-        </div>
-        <div class="flex flex-col items-center justify-center">
-          <img src="/images/image-thomas.jpg" alt="" />
-          <p>
-            Sunnyside's enthusiasm coupled with their keen interst in our
-            brand's success made it a satisfying and enjoyable experience.
-          </p>
-          <div class="testimonial-name">
-            <p>Thomas S.</p>
-            <p>Chief Operating Officer</p>
+          <div
+            class="flex flex-col items-center justify-center gap-8 mt-[28px]"
+          >
+            <img
+              class="rounded-full w-[72px] mb-[24px]"
+              src="./images/image-thomas.jpg"
+              alt=""
+            />
+            <p
+              class="font-[Barlow] text-[18px] leading-[165%] font-semibold text-gray-500"
+            >
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </p>
+            <div class="testimonial-name">
+              <p class="font-[Fraunces] font-black text-[18px]">Thomas S.</p>
+              <p class="font-[Barlow] text-gray-400">Chief Operating Officer</p>
+            </div>
           </div>
-        </div>
-        <div class="flex flex-col items-center justify-center">
-          <img src="/images/image-jennie.jpg" alt="" />
-          <p>
-            Incredible end result! Our sales increased over 400% when we worked
-            with Sunnyside. Highly recommended!
-          </p>
-          <div class="testimonial-name">
-            <p>Jennie F.</p>
-            <p>Business Owner</p>
+          <div
+            class="flex flex-col items-center justify-center gap-8 mt-[28px]"
+          >
+            <img
+              class="rounded-full w-[72px] mb-[24px]"
+              src="./images/image-jennie.jpg"
+              alt=""
+            />
+            <p
+              class="font-[Barlow] text-[18px] leading-[165%] font-semibold text-gray-500"
+            >
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+            <div class="testimonial-name">
+              <p class="font-[Fraunces] font-black text-[18px]">Jennie F.</p>
+              <p class="font-[Barlow] text-gray-400">Business Owner</p>
+            </div>
           </div>
         </div>
       </section>
-      <section class="image-gallery">
-        <div class="milk"></div>
-        <div class="plate"></div>
-        <div class="cone"></div>
-        <div class="cubes"></div>
+      <section class="image-gallery grid grid-cols-2 lg:grid-cols-4">
+        <div class="milk">
+          <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="" />
+        </div>
+        <div class="plate">
+          <img src="./images/desktop/image-gallery-orange.jpg" alt="" />
+        </div>
+        <div class="cone">
+          <img src="./images/desktop/image-gallery-cone.jpg" alt="" />
+        </div>
+        <div class="cubes">
+          <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="" />
+        </div>
       </section>
-      <footer>
-        <div class="footer-title"></div>
-        <div class="footer-links">
+      <footer
+        class="h-[350px] text-[18px] bg-[#90D4C6] font-semibold text-teal-900/70 py-[48px] flex flex-col items-center justify-around"
+      >
+        <div class="footer-logo">
+          <img class="lg:h-[75px]" src="./images/logo.svg" alt="" />
+        </div>
+        <div class="font-[Barlow] footer-links flex gap-[32px]">
           <a href="#">About</a>
           <a href="#">Services</a>
           <a href="#">Projects</a>
         </div>
-        <div class="social-links">
-          <a href=""><img src="/images/icon-facebook.svg" alt="" /></a>
-          <a href=""><img src="/images/icon-instagram.svg" alt="" /></a>
-          <a href=""><img src="/images/icon-twitter.svg" alt="" /></a>
-          <a href=""><img src="/images/icon-pinterest.svg" alt="" /></a>
+        <div class="social-links flex gap-[16px]">
+          <a href=""><img src="./images/icon-facebook.svg" alt="" /></a>
+          <a href=""><img src="./images/icon-instagram.svg" alt="" /></a>
+          <a href=""><img src="./images/icon-twitter.svg" alt="" /></a>
+          <a href=""><img src="./images/icon-pinterest.svg" alt="" /></a>
         </div>
       </footer>
     </main>
+
+    <script src="/script.js"></script>
   </body>
 </html>
